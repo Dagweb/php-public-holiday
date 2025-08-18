@@ -1,0 +1,39 @@
+{
+  "name": "dagweb/php-public-holiday",
+  "description": "Tool for calculate public holiday dates",
+  "type": "library",
+  "license": "GPL-3.0-only",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Dagweb",
+      "homepage": "https://github.com/Dagweb",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dagweb\\PhpPublicHoliday\\": "./src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dagweb\\PhpPublicHoliday\\Tests\\": "./tests/"
+    }
+  },
+  "require": {
+    "php": ">=8.3"
+  },
+  "require-dev": {
+    "vimeo/psalm": "^6.12",
+    "phpunit/phpunit": "^12.2",
+    "friendsofphp/php-cs-fixer": "^3.84"
+  },
+  "scripts": {
+    "cs-fixer": "vendor/bin/php-cs-fixer --allow-risky=yes --config=.php-cs-fixer.php fix",
+    "psalm": "vendor/bin/psalm",
+    "phpunit": "vendor/bin/phpunit",
+    "validation": "composer validate && composer cs-fixer && composer psalm && composer phpunit"
+  }
+}
