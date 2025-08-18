@@ -1,0 +1,6 @@
+services:
+  public-holiday:
+    build: .
+    container_name: php-public-holiday
+    volumes:
+      - .:/opt/public-holiday
