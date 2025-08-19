@@ -7,6 +7,9 @@ namespace Dagweb\PhpPublicHoliday\France;
 use Dagweb\PhpPublicHoliday\PublicHolidayInterface;
 use Dagweb\PhpPublicHoliday\Service\PublicHolidayDateService;
 
+/**
+ * @psalm-api
+ */
 enum PublicHoliday: string implements PublicHolidayInterface
 {
     private const string DATE_JOUR_DE_L_AN = '01-01';

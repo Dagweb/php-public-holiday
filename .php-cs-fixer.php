@@ -100,6 +100,7 @@ $rules = [
 ];
 
 return (new PhpCsFixer\Config())
+    ->setParallelConfig(PhpCsFixer\Runner\Parallel\ParallelConfigFactory::detect())
     ->setRules($rules)
     ->setFinder(
         PhpCsFixer\Finder::create()

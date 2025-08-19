@@ -9,7 +9,9 @@ interface PublicHolidayInterface
     public static function getDate(self $case, ?int $year = null): \DateTimeInterface;
 
     /**
-     * @return \DateTimeInterface[]
+     * @return array<string, \DateTimeInterface>
+     *
+     * @psalm-api
      */
-    public static function getPublicHolidays(): array;
+    public static function getPublicHolidays(?int $year = null): array;
 }

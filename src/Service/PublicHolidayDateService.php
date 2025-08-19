@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Dagweb\PhpPublicHoliday\Service;
 
+/**
+ * @internal
+ *
+ * @psalm-internal Dagweb\PhpPublicHoliday
+ */
 final class PublicHolidayDateService
 {
     public static function calculateEaster(int $year): \DateTimeImmutable

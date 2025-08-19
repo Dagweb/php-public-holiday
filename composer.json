@@ -12,6 +12,11 @@
       "role": "Developer"
     }
   ],
+  "support": {
+    "issues": "https://github.com/Dagweb/php-public-holiday/issues",
+    "source": "https://github.com/Dagweb/php-public-holiday",
+    "docs": "https://github.com/Dagweb/php-public-holiday"
+  },
   "autoload": {
     "psr-4": {
       "Dagweb\\PhpPublicHoliday\\": "./src/"

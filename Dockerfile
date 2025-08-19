@@ -5,12 +5,13 @@ LABEL author='Dagweb'
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 ###< Install composer
 
-###> Configure php
+###> Configure dev env
+RUN apk add --no-cache git
 RUN apk add --no-cache --virtual .build-deps autoconf dpkg-dev dpkg file g++ gcc libc-dev make pkgconf re2c linux-headers
 RUN pecl install xdebug && \
     docker-php-ext-enable xdebug
 RUN apk del --no-network .build-deps;
-###< Configure php
+###< Configure dev env
 
 COPY . /opt/public-holiday
 WORKDIR /opt/public-holiday
