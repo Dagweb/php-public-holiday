@@ -12,7 +12,7 @@ Supported countries:
 ### Usage
 Import Enum class and use it.
 
-To get the spécific date, use the ```getDate(self $case, ?int $year = null): \DateTimeInterface``` method of the Enum.
+To get the spécific date, use the ```getDate(self $case, ?int $year = null): \DateTimeImmutable``` method of the Enum.
 
-To get the list of all dates, use the ```getPublicHolidays(?int $year = null): array<string, \DateTimeInterface>``` method of the Enum.
+To get the list of all dates, use the ```getPublicHolidays(?int $year = null): array<string, \DateTimeImmutable>``` method of the Enum.
 

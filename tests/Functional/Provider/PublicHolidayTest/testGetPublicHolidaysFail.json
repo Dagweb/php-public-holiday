@@ -1,0 +1,17 @@
+{
+  "Test Current Year - Germany": {
+    "countryCode": "DE",
+    "year": null,
+    "expected": "Country code 'DE' is not supported."
+  },
+  "Test Current Year - China": {
+    "countryCode": "CN",
+    "year": null,
+    "expected": "Country code 'CN' is not supported."
+  },
+  "Test Current Year - Too long string": {
+    "countryCode": "Too Long String",
+    "year": null,
+    "expected": "Country code 'To...' is not supported."
+  }
+}

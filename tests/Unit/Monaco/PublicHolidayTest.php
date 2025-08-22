@@ -19,6 +19,6 @@ class PublicHolidayTest extends AbstractTestCase
     #[DataProvider('getJsonDataProvider')]
     public function testGetPublicHolidays(?int $year, array $expected): void
     {
-        static::assertSame($expected, array_map(fn (\DateTimeInterface $dateTime) => $dateTime->format('Y-m-d'), PublicHoliday::getPublicHolidays($year)));
+        static::assertSame($expected, array_map(fn (\DateTimeImmutable $dateTime) => $dateTime->format('Y-m-d'), PublicHoliday::getPublicHolidays($year)));
     }
 }

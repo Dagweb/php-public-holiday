@@ -34,7 +34,7 @@ enum PublicHoliday: string implements PublicHolidayInterface
     case JourDeNoel = 'JourDeNoel';
 
     #[\Override]
-    public static function getDate(PublicHolidayInterface $case, ?int $year = null): \DateTimeInterface
+    public static function getDate(PublicHolidayInterface $case, ?int $year = null): \DateTimeImmutable
     {
         $year ??= (int) (new \DateTimeImmutable('now'))->format('Y');
         $easter = PublicHolidayDateService::calculateEaster($year);
@@ -53,13 +53,13 @@ enum PublicHoliday: string implements PublicHolidayInterface
             self::JourDeNoel => \DateTimeImmutable::createFromFormat('Y-m-d', "$year-" . self::DATE_JOUR_DE_NOEL),
         };
 
-        assert($calculatedDate instanceof \DateTimeInterface);
+        assert($calculatedDate instanceof \DateTimeImmutable);
 
         return $calculatedDate;
     }
 
     /**
-     * @return array<string, \DateTimeInterface>
+     * @return array<string, \DateTimeImmutable>
      */
     #[\Override]
     public static function getPublicHolidays(?int $year = null): array

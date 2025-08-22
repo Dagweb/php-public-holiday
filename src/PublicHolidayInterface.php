@@ -6,10 +6,10 @@ namespace Dagweb\PhpPublicHoliday;
 
 interface PublicHolidayInterface
 {
-    public static function getDate(self $case, ?int $year = null): \DateTimeInterface;
+    public static function getDate(self $case, ?int $year = null): \DateTimeImmutable;
 
     /**
-     * @return array<string, \DateTimeInterface>
+     * @return array<string, \DateTimeImmutable>
      *
      * @psalm-api
      */
